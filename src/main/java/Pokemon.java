@@ -215,6 +215,8 @@ public class Pokemon {
                         + (opponent.hitPoints - totalDamage) + " hit points");
                 if (this.PokemonType.equals(opponent.pokeType) = false) {
                     if (this.specProb < specialtyProbability) {
+                        opponent.setHitPoints(0);
+
 
                     }
                 }
@@ -230,6 +232,12 @@ public class Pokemon {
         }
         System.out.println(" ");
         return (opponent.hitPoints < 1);
+    }
+
+    /**
+     * Javadoc comment.
+     */
+    private void setHitPoints() {
     }
 
 }
