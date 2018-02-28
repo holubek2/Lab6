@@ -241,3 +241,13 @@ public class Pokemon {
     }
 
 }
+public boolean attack(final Pokemon opponent) {
+    if (opponent.getHitPoints() > 0) {
+        if (this.pokeType.equals(opponent.pokeType) = false) {
+            if (specProb < specialProbability) {
+                System.out.println(
+            }
+
+        }
+    }
+}
