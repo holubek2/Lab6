@@ -61,6 +61,7 @@ public class Pokemon {
      */
     private int defenseLevel;
 
+
     /**
      * This Pokemon's name.
      */
@@ -91,6 +92,7 @@ public class Pokemon {
         this.attackLevel = 0;
         this.defenseLevel = 0;
         this.name = "";
+        pokemon = new Pokemon();
     }
 
     /**
@@ -174,6 +176,15 @@ public class Pokemon {
          */
         int attackBonus = d20.roll();
         int defenseBonus = d20.roll();
+        if (hitPoints < MAX_HITPOINTS) {
+            return null;
+        }
+        if (attackLevel >= 50) {
+            return null;
+        }
+        if (defenseLevel >= 50) {
+            return null;
+        }
 
         /*
          * Roll the damage dice and compute total damage.
@@ -202,6 +213,11 @@ public class Pokemon {
             if ((opponent.hitPoints - totalDamage) > 0) {
                 System.out.println(opponent.name + " has "
                         + (opponent.hitPoints - totalDamage) + " hit points");
+                if (this.PokemonType.equals(opponent.pokeType) = false) {
+                    if (this.specProb < specialtyProbability) {
+
+                    }
+                }
             } else {
                 System.out.println(opponent.name + " has been defeated!");
             }
